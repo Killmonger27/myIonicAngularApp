@@ -1,20 +1,48 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-title>
-      Blank
-    </ion-title>
+    <ion-title> MIAGE L3 </ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
+  <ion-card-header>
+    <ion-card-header>Description</ion-card-header>
+    <ion-card-content>
+      Cette applicaton est une interface d'administration qui sert a enregistrer
+      les informations relatives a l'utilisateur(nom, prenom(s), statut). Puis
+      on a la possibilite de consulter la liste des utilisateurs enregistre(s)
+      sur une autre page.
+    </ion-card-content>
+  </ion-card-header>
 
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
-  </div>
+  <ion-list>
+    <ion-item>
+      <ion-input type="email" label="Email:"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-input type="text" label="Nom:"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-input type="text" label="Prenom:"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Statut</ion-label>
+      <ion-select>
+        <ion-select-option value="1">Etudiant</ion-select-option>
+        <ion-select-option value="2">Professeur</ion-select-option>
+        <ion-select-option value="3">Administrateur</ion-select-option>
+      </ion-select>
+    </ion-item>
+  </ion-list>
+
+  <ion-button expand="block" color="success" (click)="addUser()"
+    >Enregistrer</ion-button
+  >
+  <ion-button expand="block" color="primary" (click)="goToListe()"
+    >Liste</ion-button
+  >
+  <ion-button expand="block" color="warning">retour</ion-button>
 </ion-content>
